@@ -1,6 +1,6 @@
 FROM continuumio/miniconda3
 
-#RUN apt-get install -y libgomp1 ncbi-blast+ hmmer cd-hit
+RUN apt-get install -y libgomp1 ncbi-blast+ hmmer cd-hit
 RUN conda config --add channels defaults
 RUN conda config --add channels bioconda
 RUN conda config --add channels conda-forge
