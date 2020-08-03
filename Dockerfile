@@ -1,5 +1,6 @@
 FROM continuumio/miniconda3
-
+RUN apt-get update
+RUN apt-get install -y build-essential wget git autoconf
 RUN apt-get install -y libgomp1 ncbi-blast+ hmmer cd-hit
 RUN conda config --add channels defaults
 RUN conda config --add channels bioconda
