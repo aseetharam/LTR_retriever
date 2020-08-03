@@ -19,5 +19,7 @@ RUN cd /opt && wget https://github.com/lfaino/LoReAn/raw/noIPRS/third_party/soft
 RUN git clone https://github.com/oushujun/LTR_retriever.git
 RUN echo "source activate LTR_retriever" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
+ENV PATH /LTR_retriever/bin:$PATH
+ENV PATH /LTR_retriever:$PATH
 
 ENTRYPOINT [ "/LTR_retriever/LTR_retriever" ]
